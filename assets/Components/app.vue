@@ -1,10 +1,6 @@
 <template>
 <main>
 <h1>Swapi Project</h1>
-<nav>
-	<router-link :to="'/solo'">Solo</router-link>
-	<router-link :to="'/multi'">Multi</router-link>
-</nav>
 <router-view/>
 </main>
 </template>
