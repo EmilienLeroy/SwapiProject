@@ -1,15 +1,21 @@
 <template>
 <main>
 <h1>Swapi Project</h1>
-
+<nav>
+	<router-link :to="'/solo'">Solo</router-link>
+	<router-link :to="'/multi'">Multi</router-link>
+</nav>
+<router-view/>
 </main>
 </template>
 
 <script>
+import home from './home.vue';
+
 export default {
 	name: 'app',
+	components: {home},
 	mounted: function(){
-		console.log("product");
 		this.$http.get("https://swapi.co/api/people/1/").then((response) =>{
 			console.log(response.body)
 		})
