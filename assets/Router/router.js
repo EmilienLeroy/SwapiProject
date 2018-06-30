@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
 
-import solo from '../Components/solo.vue';
-import multi from '../Components/multi.vue';
-import home from '../Components/home.vue';
+import solo from '../Pages/solo.vue';
+import multi from '../Pages/multi.vue';
+import home from '../Pages/home.vue';
 
 export default new Router({
 	routes: [

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import app from './Components/app.vue'
+import app from './app.vue'
 import router from './Router/router'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)

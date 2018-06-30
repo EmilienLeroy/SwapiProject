@@ -6,15 +6,13 @@
 </template>
 
 <script>
-import home from './home.vue';
+import home from './Pages/home.vue';
 
 export default {
 	name: 'app',
 	components: {home},
 	mounted: function(){
-		this.$http.get("https://swapi.co/api/people/1/").then((response) =>{
-			console.log(response.body)
-		})
+		
 	}
 }
 
