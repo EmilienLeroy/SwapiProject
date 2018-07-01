@@ -25,6 +25,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
+    "babel-polyfill": "^6.0.16",
     "webpack": "^4.2.0"
   }
 }

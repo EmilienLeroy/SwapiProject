@@ -1,22 +1,23 @@
 <template>
     <div>
         <p>{{ question }}</p>
-        <answer></answer>
+        <answer v-for="(answer, index) in answers" v-bind:key="index" v-bind:text="answer.name" ></answer>
     </div>
 </template>
 
 <script>
 import answer from './Button.vue';
+import * as random from '../modules/random.js';
+import Question from '../modules/Question.js';
 export default {
     components: {answer},
     mounted: function() {
-        this.$http.get("https://swapi.co/api/people/1/").then((response) =>{
-			this.question = response.body.name
-		})
+        let question = new Question();
+        this.answers = question.allAnswer;
     },
     data(){
         return {
-            answer: [],
+            answers: [],
             question: ""
         }
     }
