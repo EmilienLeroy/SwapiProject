@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>{{ question }}</p>
+        <p>{{ question.question }}</p>
         <answer v-for="(answer, index) in answers" v-bind:key="index" v-bind:text="answer.name" ></answer>
     </div>
 </template>
@@ -9,11 +9,12 @@
 import answer from './Button.vue';
 import * as random from '../modules/random.js';
 import Question from '../modules/Question.js';
+
 export default {
     components: {answer},
     mounted: function() {
-        let question = new Question();
-        this.answers = question.allAnswer;
+        this.question = new Question();
+        this.answers = this.question.allAnswer;
     },
     data(){
         return {
