@@ -6,7 +6,7 @@ class Question {
         this.question = null;
         this.answer1 = random.getRandom(1,80);
         this.answer2 = random.getRandom(1,80);
-        this.goodAnswer = random.getRandom(0,1);
+        this.goodAnswer = random.getRandom(0,2);
         this.allAnswer = [];
         this.checkAnswer()
     }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>{{ question.question }}</p>
-        <answer v-for="(answer, index) in answers" v-bind:key="index" v-bind:text="answer.name" ></answer>
+        <answer v-for="(answer, index) in answers" v-bind:key="index" v-bind:text="answer.name" @click.native="validateAnswer(index)"></answer>
     </div>
 </template>
 
@@ -20,6 +20,20 @@ export default {
         return {
             answers: [],
             question: ""
+        }
+    },
+    methods: {
+        validateAnswer: function(index){
+            if(this.question.goodAnswer == index){
+                console.log("Good Jobs")
+            }else{
+                console.log("Aie coup dur")
+            }
+            /**
+             * Generate a new question
+             */
+            this.question = new Question();
+            this.answers = this.question.allAnswer;
         }
     }
 }
