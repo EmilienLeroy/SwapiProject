@@ -15,8 +15,10 @@ class Question {
     {
         /**
          * Verify is the 2 answer are different
+         * 404 error for people/17
          */
-        while(this.answer1 == this.answer2){
+        while(this.answer1 == this.answer2 || this.answer1 == 17 || this.answer2 == 17){
+            this.answer1 = random.getRandom(1,80);
             this.answer2 = random.getRandom(1,80);
         }
 
