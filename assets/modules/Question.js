@@ -8,6 +8,7 @@ class Question {
         this.answer2 = random.getRandom(1,80);
         this.goodAnswer = random.getRandom(0,2);
         this.allAnswer = [];
+        this.loading = true;
         this.checkAnswer()
     }
 
@@ -26,6 +27,7 @@ class Question {
             Promise.all([this.getAnswer(this.answer1), this.getAnswer(this.answer2)]).then(values => { 
                 this.allAnswer.push(values[0],values[1]);
                 this.generateQuestion();
+                this.loading = false;
             });
         }
     }

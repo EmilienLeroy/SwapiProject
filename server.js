@@ -27,6 +27,7 @@ webpack(config, (err, stats)=>{
  * Static file for the index html
  */
 app.use("/js",express.static(__dirname + "/dist"))
+app.use("/css",express.static(__dirname + "/public/css"))
 
 /**
  * Send the index file

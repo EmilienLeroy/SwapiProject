@@ -1,8 +1,14 @@
 <template>
     <div>
         <score v-bind:score="score"></score>
-        <p>{{ question.question }}</p>
-        <answer v-for="(answer, index) in answers" v-bind:key="index" v-bind:text="answer.name" @click.native="validateAnswer(index)"></answer>
+        <div>        
+            <p>{{ question.question }}</p>
+        </div>
+        <div>
+            <transition-group name="slide-fade">
+                <answer v-for="(answer, index) in answers" v-bind:key="index" v-bind:text="answer.name" @click.native="validateAnswer(index)"></answer>
+            </transition-group>
+        </div>
     </div>
 </template>
 
@@ -24,9 +30,9 @@ export default {
     data(){
         return {
             answers: [],
-            question: "",
+            question: true,
             score: 0,
-            nbQuestion: 0
+            nbQuestion: 0,
         }
     },
     methods: {
@@ -50,3 +56,16 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-enter
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+</style>
+
