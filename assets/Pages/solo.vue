@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>Solo</h1>
         <question></question>
     </div>
 </template>

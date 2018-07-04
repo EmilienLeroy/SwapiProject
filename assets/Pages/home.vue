@@ -1,7 +1,10 @@
 <template>
-    <div class="menu">
-        <router-link class="menu__item" :to="'/solo'">Solo</router-link>
-        <router-link class="menu__item" :to="'/multi'">Multi</router-link>
+    <div>
+        <p class="block__title">Are you a fan of Star Wars ?</p>
+        <div class="menu">
+            <router-link class="menu__item" :to="'/solo'">Solo</router-link>
+            <router-link class="menu__item" :to="'/multi'">Multi</router-link>
+        </div>
     </div>
 </template>
 
@@ -33,6 +36,12 @@ export default {
     color: #1c0e03;
     background-color: #e2c963;
     transition: all 0.15s ease;
+}
+
+.block__title{
+	color: #e2c963;
+	font-family: helvetica neue,Helvetica,Arial,sans-serif;
+	font-size: 20px;
 }
 </style>
 

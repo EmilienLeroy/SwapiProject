@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="question">
         <score v-bind:score="score"></score>
-        <div>        
+        <div class="question__title">        
             <p>{{ question.question }}</p>
         </div>
         <div>
-            <transition-group name="slide-fade">
+            <transition-group name="slide-fade" mode="out-in">
                 <answer v-for="(answer, index) in answers" v-bind:key="index" v-bind:text="answer.name" @click.native="validateAnswer(index)"></answer>
             </transition-group>
         </div>
@@ -58,14 +58,23 @@ export default {
 </script>
 
 <style scoped>
-.slide-fade-enter-active {
+.slide-fade-enter-active, .slide-fade-leave-active {
   transition: all .3s ease;
 }
-
+ 
 .slide-fade-enter
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+}
+
+.slide-fade-leave-to{
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+.question__title{
+    height: 50px;
 }
 </style>
 
