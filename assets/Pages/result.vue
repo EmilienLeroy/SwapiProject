@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Result</h2>
-        <h3>your score: {{score}}/5</h3>
+        <score v-bind:score="score"></score>
         <customButton v-bind:text="replay" @click.native="toSolo"></customButton>
         <customButton v-bind:text="home" @click.native="toHome"></customButton>
     </div>
@@ -9,9 +9,11 @@
 
 <script>
 import customButton from '../Components/Button.vue';
+import score from '../Components/Score.vue';
 export default {
     components: {
-        customButton
+        customButton,
+        score
     },
     name: 'result',
     data () {

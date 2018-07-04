@@ -75,6 +75,8 @@ export default {
 
 .question__title{
     height: 50px;
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 25px;
 }
 </style>
 

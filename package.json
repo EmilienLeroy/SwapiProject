@@ -12,9 +12,11 @@
   "dependencies": {
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "particles.js": "^2.0.0",
     "socket.io": "^2.1.1",
     "vue": "^2.5.16",
     "vue-loader": "^14.2.2",
+    "vue-particles": "^1.0.9",
     "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.16",
@@ -24,8 +26,8 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
     "babel-polyfill": "^6.0.16",
+    "babel-preset-env": "^1.7.0",
     "webpack": "^4.2.0"
   }
 }

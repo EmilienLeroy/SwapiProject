@@ -1,10 +1,10 @@
 <template>
-	<main>
-		<div class="header">	
+	<main >
+		
+		<div class="header" id="particle">	
 			<h1 class="header__title">SWAPI QUIZ</h1>
 		</div>
 		<div class="block">
-			
 			<div>
 				<transition name="slide" mode="out-in">
 					<router-view></router-view>
@@ -21,7 +21,6 @@ export default {
 	name: 'app',
 	components: {home},
 	mounted: function(){
-		
 	}
 }
 
@@ -48,6 +47,7 @@ main{
 	padding: 0;
 	text-align: center;
 	height: 50%;
+	padding-top: 50px;
 }
 
 

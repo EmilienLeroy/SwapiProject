@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span>Score: {{ score }} / 5</span>
+        <span class="score">Score: {{ score }} / 5</span>
     </div>
 </template>
 
@@ -10,3 +10,10 @@ export default {
     props: ['score']
 }
 </script>
+
+<style scoped>
+.score{
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+}
+</style>
+
