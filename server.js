@@ -16,6 +16,8 @@ global.io = require('socket.io')(http);
 const webpack = require("webpack");
 const config = require("./config/webpack.config");
 
+let rooms = [];
+
 /**
  * generate bundle js
  */
@@ -35,6 +37,31 @@ app.use("/css",express.static(__dirname + "/public/css"))
 app.get("/",(req,res)=>{
 	res.sendFile(__dirname + "/public/index.html");
 })
+
+/**
+ * Generate a unique room
+ */
+app.get("/generateRoom", (req,res)=> {
+	let room = Math.round( Math.random() * 100000 )
+
+	while(rooms.includes(room)){
+		room = Math.round( Math.random() * 100000 )
+	}
+
+	rooms.push(room)
+
+	res.json({
+		id : room
+	})
+})
+
+io.sockets.on('connection', function(socket) {
+	socket.on('room', function(room) {
+		socket.join(room);
+		console.log('joined room'+room);
+	});
+});
+
 
 
 /**

@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 .menu__item{
 	padding: 0.75em 3em;

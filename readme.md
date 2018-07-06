@@ -37,3 +37,6 @@ Now you can start the project.
 ```
 npm start
 ```
+
+The server listen the port 8888. Just go into you browser and go at
+http://localhost:8888. 
