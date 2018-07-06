@@ -62,7 +62,7 @@ app.get("/generateRoom", (req,res)=> {
 
 io.sockets.on('connection', function(socket) {
 	socket.on('room', function(room) {
-		socket.join(room);
+		socket.join(room.id);
 		console.log('joined room'+room);
 		let currentGame = game.find(function(element){
 			if(element.id == room.id){
@@ -72,8 +72,18 @@ io.sockets.on('connection', function(socket) {
 		})
 
 		console.log(currentGame)
-		io.sockets.in(room).emit('player', currentGame);
+		io.sockets.in(room.id).emit('player', currentGame);
 	});
+
+	socket.on('answer', function(newGame){
+		let currentGame = game.find(function(element){
+			if(element.id == newGame.id){
+				element.player = newGame.player
+				return element;
+			}
+		})
+		io.sockets.in(newGame.id).emit('answer', currentGame);
+	})
 });
 
 
