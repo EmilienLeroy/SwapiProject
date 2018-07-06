@@ -17,6 +17,7 @@ const webpack = require("webpack");
 const config = require("./config/webpack.config");
 
 let rooms = [];
+let game = [];
 
 /**
  * generate bundle js
@@ -49,6 +50,10 @@ app.get("/generateRoom", (req,res)=> {
 	}
 
 	rooms.push(room)
+	game.push({
+		id: room,
+		player: []
+	})
 
 	res.json({
 		id : room
@@ -59,6 +64,15 @@ io.sockets.on('connection', function(socket) {
 	socket.on('room', function(room) {
 		socket.join(room);
 		console.log('joined room'+room);
+		let currentGame = game.find(function(element){
+			if(element.id == room.id){
+				element.player.push({id:element.player.length+1,name: room.player, score: 0})
+				return element;
+			}
+		})
+
+		console.log(currentGame)
+		io.sockets.in(room).emit('player', currentGame);
 	});
 });
 
