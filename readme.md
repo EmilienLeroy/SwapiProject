@@ -10,11 +10,13 @@ from the api. During this project i have learn a lot about Vue.js because it was
 ## RoadMap
 
 - [x] Solo Quizz
-- [ ] Multi Quizz (with Socket)
+- [x] Multi Quizz (with Socket)
 - [x] Use Vue Router 
 - [x] Use Vue Transition
 - [ ] Use Vuex (store)
 - [x] Continuous integration
+- [ ] Improve question generator
+- [ ] Improve server side
 
 
 ## Getting Started
