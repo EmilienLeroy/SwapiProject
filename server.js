@@ -52,7 +52,8 @@ app.get("/generateRoom", (req,res)=> {
 	rooms.push(room)
 	game.push({
 		id: room,
-		player: []
+		player: [],
+		nbQuestion:0
 	})
 
 	res.json({
@@ -79,10 +80,17 @@ io.sockets.on('connection', function(socket) {
 		let currentGame = game.find(function(element){
 			if(element.id == newGame.id){
 				element.player = newGame.player
+				element.nbQuestion++
 				return element;
 			}
 		})
-		io.sockets.in(newGame.id).emit('answer', currentGame);
+		if(currentGame.nbQuestion < 4){
+			console.log('next')
+			io.sockets.in(newGame.id).emit('answer', currentGame);
+		}else{
+			console.log('end')
+			io.sockets.in(newGame.id).emit('resutl', currentGame);
+		}
 	})
 });
 

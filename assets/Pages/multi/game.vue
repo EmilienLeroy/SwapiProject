@@ -58,6 +58,10 @@ export default {
             }
             self.players = game.player
         })
+
+        this.socket.on('resutl',function(game){
+            self.$router.push({name: 'resultMulti', params: { game: game }})
+        })
     },
     data(){
         return{
@@ -76,9 +80,6 @@ export default {
         validateAnswer: function(index){
             if(this.question.goodAnswer == index){
                 this.players[this.idPlayer-1].score++;
-                this.nbQuestion ++;
-            }else{
-                this.nbQuestion ++;
             }
 
             this.socket.emit('answer', {id: this.id, player: this.players});
