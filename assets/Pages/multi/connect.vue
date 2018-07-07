@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <input v-model="id" placeholder="Game Id">
-        <input v-model="name" placeholder="Username">
+    <div class="menu">
+        <input class="input" v-model="id" placeholder="Game Id">
+        <input class="input" v-model="name" placeholder="Username">
         <connectBtn v-bind:text="'connect'"  @click.native="connect()"></connectBtn>
     </div>
 </template>

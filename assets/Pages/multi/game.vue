@@ -1,14 +1,20 @@
 <template>
-    <div>
-        <h2>You are the player n° {{idPlayer}}</h2>
-        <ul>
+    <div class="game">
+        <h2 class="game__title">You are the player n° {{idPlayer}}</h2>
+        <ul class="game__list">
             <li v-for="(player, index)  in players" v-bind:key="index">
                 {{ player.name }} : {{player.score}}
             </li>
         </ul>
-        <div>
-            <div v-if="players.length < 2">Wait a other player</div>
-            <div v-else-if="currentPlayer != idPlayer">Wait</div>
+        <div class="game__main">
+            <div class="game_content" v-if="players.length < 2">
+                Waiting another player...
+                <FadeLoader :color="'#e2c963'"></FadeLoader>
+            </div>
+            <div class="game_content" v-else-if="currentPlayer != idPlayer">
+                It isn't your turn, wait...
+                <FadeLoader :color="'#e2c963'"></FadeLoader>
+            </div>
             <div v-else class="question">
                 <div class="question__title">        
                     <p>{{ question.question }}</p>
@@ -27,10 +33,16 @@
 import io from 'socket.io-client';
 import answer from '../../Components/Button.vue';
 import Question from '../../modules/Question.js';
+import FadeLoader from 'vue-spinner/src/PulseLoader.vue'
 
+/**
+ * TODO
+ * verifi if the game is create else redirect the player
+ */
 export default {
     components:{
-        answer
+        answer,
+        FadeLoader
     },    
     created() {
         //get the context for the socket callback
@@ -62,6 +74,9 @@ export default {
 
         //update the score and change the player
         this.socket.on('answer',function(game){
+            self.question = new Question();
+            self.answers = self.question.allAnswer;
+
             if(self.currentPlayer==1){
                 self.currentPlayer++
             }else{
@@ -101,3 +116,17 @@ export default {
     }
 }
 </script>
+
+<style>
+.game{
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+}
+.game_title{
+	font-size: 20px;
+}
+.game__list{
+    list-style-type: none;
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+}
+</style>
+

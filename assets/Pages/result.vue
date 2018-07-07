@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h2>Result</h2>
+    <div class="result">
+        <h2 class="result__title">Result</h2>
         <score v-bind:score="score"></score>
         <customButton v-bind:text="replay" @click.native="toSolo"></customButton>
         <customButton v-bind:text="home" @click.native="toHome"></customButton>
@@ -36,3 +36,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.result__title{
+    height: 30px;
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 25px;
+}
+</style>
+

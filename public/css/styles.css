@@ -1,10 +1,79 @@
+@font-face {
+    font-family: starwars;
+    src: url("./fonts/Death\ Star.otf");
+}
+
 *{
     margin: 0;
     padding: 0;
 }
+
 body{
     background-color: #1c0e03;
     color: #e2c963;
     overflow: hidden;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e2c9637c;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e2c9637c;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #e2c9637c;
+}
+
+a:focus, button:focus, input:focus{
+    outline: none;
+}
+
+.menu__item{
+	padding: 0.75em 3em;
+    border-radius: 2em;
+    display: inline-block;
+    color: #e2c963;
+    background-color: transparent;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+    border: 1px solid #e2c963;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.menu__item--mulit{
+    width: 300px;
+}
+
+.input{
+	padding: 0.75em 3em;
+    border-radius: 2em;
+    display: inline-block;
+    color: #e2c963;
+    background-color: transparent;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+    border: 1px solid #e2c963;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.menu__item:hover{
+    color: #1c0e03;
+    background-color: #e2c963;
+    transition: all 0.15s ease;
+}
+
+.block__title{
+	color: #e2c963;
+	font-family: helvetica neue,Helvetica,Arial,sans-serif;
+	font-size: 20px;
 }
 

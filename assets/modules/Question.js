@@ -48,9 +48,13 @@ class Question {
         });
     }
 
+    /**
+     * TODO
+     * Generate more type of question
+     */
     generateQuestion()
     {
-        this.question = "Who has hair "+this.allAnswer[this.goodAnswer].hair_color+" ? ";
+        this.question = "Who has "+this.allAnswer[this.goodAnswer].hair_color+" hair ? ";
     }
 }
 

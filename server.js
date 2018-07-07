@@ -108,7 +108,7 @@ io.sockets.on('connection', function(socket) {
 		})
 
 		//Send the new score or redirect to the result page if the game is finish
-		if(currentGame.nbQuestion < 4){
+		if(currentGame.nbQuestion < 6){
 			io.sockets.in(newGame.id).emit('answer', currentGame);
 		}else{
 			io.sockets.in(newGame.id).emit('resutl', currentGame);

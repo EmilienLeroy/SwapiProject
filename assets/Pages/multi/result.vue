@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <h2>Result</h2>
+    <div class="result">
+        <h2 class="result__title">Result</h2>
         <div>
-            <ul>
+            <ul class="game__list">
                 <li v-for="(player, index)  in game.player" v-bind:key="index">
                     {{ player.name }} : {{player.score}}
                 </li>
@@ -35,3 +35,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.result__title{
+    height: 50px;
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 25px;
+}
+</style>
+

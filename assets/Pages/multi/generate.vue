@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h2>ID: {{id}}</h2>
-        <input v-model="name" placeholder="Username">
+        <h2 class="block__title">Send this id to your friend: {{id}}</h2>
+        <input class="input" v-model="name" placeholder="Username">
         <connectBtn v-bind:text="'connect'"  @click.native="connect()"></connectBtn>
 
     </div>

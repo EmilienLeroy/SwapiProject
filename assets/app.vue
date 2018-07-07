@@ -2,7 +2,7 @@
 	<main >
 		
 		<div class="header" id="particle">	
-			<h1 class="header__title">SWAPI QUIZ</h1>
+			<h1 class="header__title"  >Swapi quizz</h1>
 		</div>
 		<div class="block">
 			<div>
@@ -16,13 +16,16 @@
 
 <script>
 import home from './Pages/home.vue';
+import * as random from './modules/random.js';
 
 export default {
 	name: 'app',
 	components: {home},
 	mounted: function(){
-	}
+		
+	},
 }
+
 
 </script>
 
@@ -39,8 +42,10 @@ main{
 }
 
 .header__title{
-	font-family: helvetica neue,Helvetica,Arial,sans-serif;
-	font-size: 60px;
+	font-family: starwars;
+	font-size: 80px;
+	letter-spacing: 5px;
+	text-shadow: 0px 0px 15px #ffe900ed;
 }
 
 .block{

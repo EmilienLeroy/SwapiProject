@@ -21,6 +21,13 @@ from the api. During this project i have learn a lot about Vue.js because it was
 
 ## Getting Started
 
+### Prerequisites
+
+You need to have install on your computer :
+
+- [NodeJS](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/)  
+
 ### Installation
 
 Clone the repository into your computer.
@@ -29,15 +36,14 @@ git clone https://github.com/EmilienLeroy/SwapiProject.git
 cd SwapiProject
 ```
 
-Install all dependency and nodemon glodaly (if isn't already install).
+Install all dependency.
 ```
 npm install
-npm install -g nodemon 
 ```
 
 Now you can start the project.
 ```
-npm start
+npm run build
 ```
 
 The server listen the port 8888. Just go into you browser and go at
