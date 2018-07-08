@@ -1,6 +1,7 @@
 # Swapi Quizz
 
 [![CircleCI](https://circleci.com/gh/EmilienLeroy/SwapiProject.svg?style=svg)](https://circleci.com/gh/EmilienLeroy/SwapiProject)
+[![License][license-image]][license-url]
 
 ## Synopsys
 
@@ -58,3 +59,6 @@ We would love you for the contribution to ``Swapi Quizz`` project, check the ``L
 ## License
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
+
+[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
+[license-url]: LICENSE

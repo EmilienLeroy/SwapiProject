@@ -122,6 +122,6 @@ io.sockets.on('connection', function(socket) {
 /**
  * Run the server
  */
-http.listen(8888,()=>{
+http.listen(process.env.PORT || 8888,()=>{
     console.log("Server run on localhost:8888");
 })
