@@ -1,12 +1,15 @@
 # Swapi Quizz
 
+
 [![CircleCI](https://circleci.com/gh/EmilienLeroy/SwapiProject.svg?style=svg)](https://circleci.com/gh/EmilienLeroy/SwapiProject)
 [![License][license-image]][license-url]
+
+
 
 ## Synopsys
 
 This is a project for my Javascript exam. It's based on the [SWAPI](https://swapi.co/) api. He generate a random quizz with the data get
-from the api. During this project i have learn a lot about Vue.js because it was my first project with this framework. I also a mutliplayer part to train my self with socket.io
+from the api. During this project i have learn a lot about Vue.js because it was my first project with this framework. I also implement a mutliplayer part to train my self with socket.io. Try the [online demo](https://swapi-quizz.herokuapp.com/#/).
 
 ## RoadMap
 
