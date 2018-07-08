@@ -57,7 +57,7 @@ export default {
         this.answers = this.question.allAnswer;
 
         //Connect the socket to the server
-        this.socket = io.connect('http://localhost:8888');
+        this.socket = io.connect();
 
         //on connect join a room
         this.socket.on('connect', function() {
