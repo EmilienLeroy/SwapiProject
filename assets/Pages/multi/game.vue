@@ -128,5 +128,20 @@ export default {
     list-style-type: none;
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
 }
+
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all .3s ease;
+}
+ 
+.slide-fade-enter
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to{
+    transform: translateX(-10px);
+    opacity: 0;
+}
 </style>
 

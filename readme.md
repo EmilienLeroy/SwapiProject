@@ -5,7 +5,7 @@
 ## Synopsys
 
 This is a project for my Javascript exam. It's based on the [SWAPI](https://swapi.co/) api. He generate a random quizz with the data get
-from the api. During this project i have learn a lot about Vue.js because it was my first project with this framework. 
+from the api. During this project i have learn a lot about Vue.js because it was my first project with this framework. I also a mutliplayer part to train my self with socket.io
 
 ## RoadMap
 
@@ -17,6 +17,7 @@ from the api. During this project i have learn a lot about Vue.js because it was
 - [x] Continuous integration
 - [ ] Improve question generator
 - [ ] Improve server side
+- [ ] Implement test
 
 
 ## Getting Started
@@ -43,8 +44,17 @@ npm install
 
 Now you can start the project.
 ```
-npm run build
+npm start
 ```
 
 The server listen the port 8888. Just go into you browser and go at
 http://localhost:8888. 
+
+## Contribute
+
+We would love you for the contribution to ``Swapi Quizz`` project, check the ``LICENSE`` file for more info.
+
+
+## License
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
