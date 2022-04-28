@@ -35,7 +35,7 @@ class Question {
     getAnswer(nbQuestion)
     {
         return new Promise((resolve, reject) => {
-            let url = "https://swapi.co/api/people/"+nbQuestion;
+            let url = "https://swapi.dev/api/people/"+nbQuestion;
             let xhttp = new XMLHttpRequest();
             xhttp.responseType = 'json'
             xhttp.onreadystatechange = function() {
